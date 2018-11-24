@@ -1,0 +1,2 @@
+class FavoriteVideo < ApplicationRecord
+end
