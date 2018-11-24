@@ -16,6 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 gem 'hirb'
+gem 'pry-rails'
 
 gem 'webpacker', '~> 3.5'
 gem 'react-rails'
