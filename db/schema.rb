@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_25_034757) do
+ActiveRecord::Schema.define(version: 2018_11_25_042620) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 2018_11_25_034757) do
     t.index ["user_id"], name: "index_exercises_on_user_id"
   end
 
+  create_table "journal_entries", force: :cascade do |t|
+    t.integer "feeling"
+    t.text "body"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_journal_entries_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -35,5 +44,14 @@ ActiveRecord::Schema.define(version: 2018_11_25_034757) do
     t.string "username"
   end
 
+  create_table "videos", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.text "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "exercises", "users"
+  add_foreign_key "journal_entries", "users"
 end
