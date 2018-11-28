@@ -7,10 +7,10 @@ PASSWORD = "secret"
 NUM_OF_EXERCISES = 10
 
 super_user = User.create(
-  first_name: "John",
-  last_name: "Doe",
+  first_name: "Dan",
+  last_name: "Scholz",
   username: "bumper21",
-  email: "bumper212121@gmail.com",
+  email: "bumper21@gmail.com",
   password: PASSWORD,
   admin: true
 )
@@ -41,7 +41,7 @@ end
 
 users = User.all
 
-NUM_OF_JOURNAL_ENTRIES = 15
+NUM_OF_JOURNAL_ENTRIES = 30
 
 NUM_OF_JOURNAL_ENTRIES.times do
   j = JournalEntry.create(
