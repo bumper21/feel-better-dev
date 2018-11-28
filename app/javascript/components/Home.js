@@ -1,16 +1,11 @@
-// import React from "react"
-// import PropTypes from "prop-types"
-// class Home extends React.Component {
-//   render () {
-//     return (
-//       <React.Fragment>
-//         Greeting: {this.props.greeting}
-//       </React.Fragment>
-//     );
-//   }
-// }
+import React from 'react';
 
-// Home.propTypes = {
-//   greeting: PropTypes.string
-// };
-// export default Home
+class Home extends React.Component {
+  render () {
+    return (
+      <div>Home Page-Feel Better</div>
+    )
+  }
+}
+
+export default Home
