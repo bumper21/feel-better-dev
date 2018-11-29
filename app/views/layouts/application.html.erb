@@ -15,6 +15,11 @@
     <header>
       <nav>
         <%= link_to 'Home Page', root_path %>
+        <% if user_signed_in? && current_user.admin? %>
+          <%= link_to 'Exercises', exercises_path %>
+          |
+          <%= link_to 'New Exercise', new_exercise_path %>
+        <% end %>
         <% if user_signed_in? %>
           Hello <%= current_user.first_name %>
           |
@@ -25,14 +30,19 @@
           |
           <%= link_to 'Sign In', new_sessions_path %>
         <% end %>
-        <% if user_signed_in? && current_user.admin? %>
-          <%= link_to 'Exercises', exercises_path %>
-        <% end %>
       </nav>
       <hr>
     </header>
 
-      <%= yield %>
-    </main>
+    <% flash.each do |type, message| %>
+        <div class="alert alert-<%= type %> alert-dismissible fade show" role="alert">
+          <%= message %>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+    <% end %>
+
+    <%= yield %>
   </body>
 </html>

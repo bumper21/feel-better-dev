@@ -1,7 +1,7 @@
 <ul>
   <% @exercises.each do |e| %>
     <li>
-      <%= e.title %> <br />
+      <%= link_to(e.title, exercise_path(e)) %> <br />
       <%= e.body %>
     </li>
   <% end %>
