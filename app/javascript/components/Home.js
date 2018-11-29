@@ -3,7 +3,11 @@ import React from 'react';
 class Home extends React.Component {
   render () {
     return (
-      <div>Home Page-Feel Better</div>
+        <div className="container justify-content">
+          <button className="btn btn-success">Feel Better</button><br />
+          <button className="btn btn-primary">Watch Better</button> <br />
+          <button className="btn btn-warning">Journal Better</button>
+        </div>
     )
   }
 }

@@ -1,8 +1,15 @@
 class JournalEntriesController < ApplicationController
   def new
+    @journal_entry = JournalEntry.new
   end
 
   def create
+    @journal_entry = JournalEntry.new journal_entry_params
+    @journal_entry.user = current_user
+
+    if @journal_entry.save
+      
+    end
   end
 
   def index
