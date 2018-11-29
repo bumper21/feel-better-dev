@@ -8,6 +8,7 @@
     <%= javascript_pack_tag 'application' %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    
   </head>
 
   <body>
@@ -23,6 +24,9 @@
           <%= link_to 'Sign Up', new_user_path %>
           |
           <%= link_to 'Sign In', new_sessions_path %>
+        <% end %>
+        <% if user_signed_in? && current_user.admin? %>
+          <%= link_to 'Exercises', exercises_path %>
         <% end %>
       </nav>
       <hr>
