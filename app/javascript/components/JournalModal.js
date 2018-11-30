@@ -36,7 +36,7 @@ class JournalModal extends Component {
 
     const tooltip = (
     <Tooltip id="modal-tooltip"> 
-      -5 is severly low, consider calling/talking to a friend or help-line. 0 is indifferent or numb. +5 means you are feeling a lot of positive emotion and functioning very well today.
+      -5 is severly low, don't be afraid to ask for help! Zero is indifferent or numb. +5 means you are feeling a lot of positive emotion and functioning very well today.
     </Tooltip>
     );
 
