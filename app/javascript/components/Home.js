@@ -1,18 +1,23 @@
 import React from 'react';
+import { Component } from 'react'
+import ExerciseModal from './ExerciseModal';
 // import { Player } from 'video-react';
+// 
 
-class Home extends React.Component {
+class Home extends Component {
+
   render () {
     return (
-        <div className="container flex-grow" name="buttonContainer">
+        
+        <div className="container" name="buttonContainer">
           {/* <Player>
             <source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
           </Player> */}
-          <button className="btn" data-toggle="modal">Watch Better</button>
+          <ExerciseModal />
+          <button className="btn" name="VidModal" data-toggle="modal">Watch Better</button>
           <br />
-          <button className="btn btn-warning m-1">Journal Better</button>
+          <button className="btn btn-warning m-1" name="JournalModal">Journal Better</button>
           <br />
-          <button className="btn btn-success m-1">Feel Better</button>
         </div>
     )
   }
