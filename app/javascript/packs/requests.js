@@ -5,6 +5,11 @@ export const Exercise = {
     return fetch(`${BASE_URL}/exercises/${id}`, {
       credentials: "include"
     }).then(res => res.json());
+  },
+  random() {
+    return fetch(`${BASE_URL}/exercise/random`, {
+      credentials: "include"
+    }).then(res => res.json());
   }
 }
 

@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :exercises, only: [:index, :show, :create, :destroy]
+      resources :exercises, only: [:index, :show, :create, :destroy, :show_random ]
+      get '/exercise/random', to: 'exercises#show_random'
     end
   end
   
