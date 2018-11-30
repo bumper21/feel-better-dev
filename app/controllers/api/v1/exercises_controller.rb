@@ -7,10 +7,23 @@ class Api::V1::ExercisesController < ApplicationController
 
   def create
     exercise = Exercise.new exercise_params
-    render json:
+    render json: exercise
+  end
+
+  def show
+    exercise = find_exercise exercise_params
+  end
+
+  def show_random
+    exercise = Exercise.all.sample
+    render json: exercise
   end
 
   private
+
+  def find_exercise
+    exercise = Exercise.find params[:id]
+  end
 
   def exercise_params
     params.require(:exercise).permit(:title, :body)

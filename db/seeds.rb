@@ -4,7 +4,7 @@ JournalEntry.delete_all
 User.delete_all
 
 PASSWORD = "secret"
-NUM_OF_EXERCISES = 10
+NUM_OF_EXERCISES = 25
 
 super_user = User.create(
   first_name: "Dan",

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Component } from 'react'
 import { Button, Modal } from 'react-bootstrap';
+import { Exercise } from '../packs/requests';
 
 class ExerciseModal extends Component {
   constructor(props, context) {
@@ -10,16 +11,32 @@ class ExerciseModal extends Component {
     this.handleClose = this.handleClose.bind(this);
 
     this.state = {
-      show: false
+      show: false,
+      exercise: []
     };
+
+  }
+
+  componentDidMount() {
+    Exercise.random().then(exercise => {
+      this.setState({
+        exercise: {...exercise}
+      })
+    });
   }
 
   handleClose() {
     this.setState({ show: false });
+    
   }
 
   handleShow() {
     this.setState({ show: true });
+    Exercise.random().then(exercise => {
+      this.setState({
+        exercise: {...exercise}
+      })
+    })
   }
 
   render() {
@@ -31,10 +48,10 @@ class ExerciseModal extends Component {
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Name of the Exercise here</Modal.Title>
+            <Modal.Title>{this.state.exercise.title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <p> Exercise body here </p>
+            <p> {this.state.exercise.body} </p>
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.handleClose}>Close</Button>
