@@ -1,6 +1,7 @@
 import React from 'react';
 import { Component } from 'react'
 import ExerciseModal from './ExerciseModal';
+import JournalModal from './JournalModal';
 // import { Player } from 'video-react';
 // 
 
@@ -16,7 +17,7 @@ class Home extends Component {
           <ExerciseModal />
           <button className="btn" name="VidModal" data-toggle="modal">Watch Better</button>
           <br />
-          <button className="btn btn-warning m-1" name="JournalModal">Journal Better</button>
+          <JournalModal />
           <br />
         </div>
     )

@@ -1,4 +1,4 @@
-class Api::V1::ExercisesController < ApplicationController
+class Api::V1::ExercisesController < Api::ApplicationController
 
   def index
     exercises = Exercise.order created_at: :desc

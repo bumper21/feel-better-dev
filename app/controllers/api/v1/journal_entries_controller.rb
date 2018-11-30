@@ -1,4 +1,4 @@
-class Api::V1::JournalEntriesController < ApplicationController
+class Api::V1::JournalEntriesController < Api::ApplicationController
   before_action :authenticate_user!
 
   def index
@@ -6,19 +6,12 @@ class Api::V1::JournalEntriesController < ApplicationController
     render json: journal_entries
   end
 
-  def new
-    journal_entry = JournalEntry.new
-  end
-
   def create
     journal_entry = JournalEntry.new journal_entry_params
     journal_entry.user = current_user
 
-    if journal_entry.save
+    journal_entry.save!
     render json: journal_entry
-    else
-      flash[:danger] = "Failed to create journal entry"
-    end
     
   end
 
