@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import { Button, Modal, FormGroup, Radio, FormControl, Tooltip, OverlayTrigger } from 'react-bootstrap';
 import { JournalEntry } from '../packs/requests';
-import JournalForm from './JournalForm';
+import JournalEntryForm from './JournalEntryForm';
 
 class JournalModal extends Component {
   constructor(props, context) {
@@ -32,12 +32,12 @@ class JournalModal extends Component {
 
   createJournalEntry(params) {
     JournalEntry.create(params).then(journal_entry => {
-      if (journal_entry.errors) {
-        this.setState({ errors: journal_entry.errors });
-      } else {
-        this.props.history.push(`/journal_entries/${journal_entry.id}`);
-      }
+      if (this.props.history.push(`/journal_entries/${journal_entry.id}`));
     });
+  }
+
+  componentDidMount() {
+    console.log(this.state.journal_entry)
   }
 
   render() {
@@ -53,7 +53,7 @@ class JournalModal extends Component {
             <Modal.Title>Your Journal Entry</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <JournalForm onSubmit={ this.createJournalEntry } />
+            <JournalEntryForm onSubmit={ this.createJournalEntry } />
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.handleClose}>Close</Button>

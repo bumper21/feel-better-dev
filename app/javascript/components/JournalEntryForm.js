@@ -1,25 +1,32 @@
 import React from 'react';
 import { FormGroup, OverlayTrigger, Radio, FormControl, Button, Tooltip} from 'react-bootstrap';
 
-class JournalForm extends React.Component {
+class JournalEntryForm extends React.Component {
   constructor(props, context) {
     super(props, context);
 
-    // this.handleChange = this.handleChange.bind(this);
-
     this.state = {
       feeling: null,
-      body: '',
+      body: ' ',
     };
+
+    this.handleChange = this.handleChange.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
 
     
   }
 
+  // handleSubmit = e => {
+  //   e.preventDefault();
 
-  // handleChange(e) {
-  //   this.setState({ feeling: e.target.value})
-  //   this.setState({ body: e.target.body });
+    
   // }
+
+  handleChange(e) {
+    this.setState({ [e.target.name]: e.target.value})
+    console.log(this.state)
+
+  }
 
   render() {
     const tooltip = (
@@ -31,7 +38,7 @@ class JournalForm extends React.Component {
     const feelingValues = [-5,-4,-3,-2,-1,0,1,2,3,4,5];
 
     return (
-      <form className="JournalEntryForm">
+      <form className="JournalEntryForm" onSubmit={this.handleSubmit} onChange={this.handleChange}>
         <FormGroup>
           <p>How are you{' '}
             <OverlayTrigger overlay={tooltip}>
@@ -40,7 +47,7 @@ class JournalForm extends React.Component {
           </p>
         </FormGroup>
 
-        <FormGroup>
+        <FormGroup >
           {
             feelingValues.map((value) => {
               return(
@@ -53,12 +60,12 @@ class JournalForm extends React.Component {
         </FormGroup>
 
         <FormGroup>
-          <FormControl name="body" componentClass="textarea" placeholder="What are your thoughts? Try reading them outloud after writithem down." />
+          <FormControl name="body" componentClass="textarea" placeholder="What are your thoughts? Try reading them outloud after writing them down." />
         </FormGroup>
-        <Button>Save this Entry</Button>
+        <Button type="submit" value="submit">Save this Entry</Button>
     </form>
 
   )}
 }
 
-export default JournalForm;
+export default JournalEntryForm;
