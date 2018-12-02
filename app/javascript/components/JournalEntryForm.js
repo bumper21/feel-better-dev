@@ -1,29 +1,35 @@
 import React from 'react';
 import { FormGroup, OverlayTrigger, Radio, FormControl, Button, Tooltip} from 'react-bootstrap';
+import { JournalEntry } from '../packs/requests'
+
+
 
 class JournalEntryForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      feeling: null,
-      body: ' ',
-    };
 
+    this.state = {
+      feeling: 0,
+      body: ' '
+    };
+    
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.createJournalEntry = this.createJournalEntry.bind(this);
 
     
   }
 
-  handleSubmit = e => {
-    e.preventDefault();
-
+  createJournalEntry(event) {
+    event.preventDefault();
+    console.log(this.state)
+    JournalEntry.create(this.state)
+    
   }
+
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value})
-    console.log(this.state)
 
   }
 
@@ -37,7 +43,7 @@ class JournalEntryForm extends React.Component {
     const feelingValues = [-5,-4,-3,-2,-1,0,1,2,3,4,5];
 
     return (
-      <form className="JournalEntryForm" onSubmit={this.handleSubmit} onChange={this.handleChange}>
+      <form className="JournalEntryForm" onChange={this.handleChange} onSubmit={this.createJournalEntry} >
         <FormGroup>
           <p>How are you{' '}
             <OverlayTrigger overlay={tooltip}>
