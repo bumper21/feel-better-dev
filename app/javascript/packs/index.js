@@ -11,6 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
       <Route path="/" component={App} />
     </Router>,
 
-    document.getElementById("contentContainer").appendChild(document.createElement("modalDiv")),
+    document.body.appendChild(document.createElement("div")),
   )
 })
