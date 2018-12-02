@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import { Button, Modal, FormGroup, Radio, FormControl, Tooltip, OverlayTrigger } from 'react-bootstrap';
+import { Button, Modal } from 'react-bootstrap';
 import JournalEntryForm from './JournalEntryForm';
 
 class JournalModal extends Component {
@@ -16,8 +16,10 @@ class JournalModal extends Component {
     this.handleClose = this.handleClose.bind(this);
   }
 
+
   handleClose() {
     this.setState({ show: false });
+
     
   }
 

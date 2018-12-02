@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormGroup, OverlayTrigger, Radio, FormControl, Button, Tooltip} from 'react-bootstrap';
+import { FormGroup, OverlayTrigger, Radio, FormControl, Button, Tooltip, Alert} from 'react-bootstrap';
 import { JournalEntry } from '../packs/requests'
 
 
@@ -22,14 +22,15 @@ class JournalEntryForm extends React.Component {
 
   createJournalEntry(event) {
     event.preventDefault();
-    console.log(this.state)
     JournalEntry.create(this.state)
-    
+    console.log(this.state)
+
   }
 
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value})
+    console.log(this.state)
 
   }
 
