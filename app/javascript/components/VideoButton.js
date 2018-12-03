@@ -2,16 +2,15 @@ import React from 'react';
 import { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import YoutubeVideo from './YoutubeVideo';
+import YOUTUBE_API_KEY from './Api_keys';
 import axios from "axios"
 
 const PLAYLIST_URL = `https://www.googleapis.com/youtube/v3/playlistItems`
-
-const apiKey = `AIzaSyDG83HUAOx9kyRPjYT0_o7nBxHal2U-of8`
 const playlistId = `PLVpJ_ku_DBpYQCtNK7pyuGW30kEbfC4bU`
 
 const options =  {
   part: `snippet`,
-  key: apiKey,
+  key: YOUTUBE_API_KEY,
   maxResults: 10,
   playlistId: playlistId
 }
