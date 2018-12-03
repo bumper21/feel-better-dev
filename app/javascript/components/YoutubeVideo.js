@@ -13,7 +13,7 @@ class YoutubeVideo extends Component {
 
   render () {
     return (
-        <ReactPlayer url="https://www.youtube.com/watch?v=IDPDEKtd2yM&t=79s&index=2&list=PLVpJ_ku_DBpYQCtNK7pyuGW30kEbfC4bU" autoPlay="false" />
+        <ReactPlayer url="https://www.youtube.com/watch?v=IDPDEKtd2yM&t=79s&index=2&list=PLVpJ_ku_DBpYQCtNK7pyuGW30kEbfC4bU" autoPlay={false} />
     )
   }
 }

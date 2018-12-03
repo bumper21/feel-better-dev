@@ -9,35 +9,28 @@ class VideoButton extends Component {
 
     this.state = {
       show: false,
-      playing: false
   
     };
 
-    this.handleShow = this.handleShow.bind(this);
-    this.handleClose = this.handleClose.bind(this);
+    this.toggle = this.toggle.bind(this)
   }
 
-
-  handleClose() {
-    this.setState({ show: false });
-
-    
+  toggle() {
+    this.setState({
+      show: !this.state.show
+    });
   }
 
-  handleShow() {
-    this.setState({ show: true });
-    
-    
-  }
+  
 
   render() {
 
     return (
       <div>
-        <Button bsStyle="danger" bsSize="large" onClick={this.handleShow}>
+        <Button bsStyle="danger" bsSize="large" onClick={this.toggle}>
           Watch Better
         </Button>
-        <YoutubeVideo />
+        { this.state.show && <YoutubeVideo />}
         
   
       </div>
