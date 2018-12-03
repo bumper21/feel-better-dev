@@ -1,8 +1,5 @@
 const BASE_URL = `http://localhost:3000/api/v1`;
-const YOUTUBE_API = `https://www.googleapis.com/youtube/v3/playlistItems`
 
-const apiKey = `AIzaSyDG83HUAOx9kyRPjYT0_o7nBxHal2U-of8`
-const playlistId= `PLVpJ_ku_DBpYQCtNK7pyuGW30kEbfC4bU`
 
 export const Exercise = {
   one(id) {
