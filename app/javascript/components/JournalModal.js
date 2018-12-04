@@ -32,9 +32,9 @@ class JournalModal extends Component {
 
     return (
       <div>
-        <Button bsStyle="info" bsSize="large" onClick={this.handleShow}>
+        <button className="btn" onClick={this.handleShow}>
           Journal Better
-        </Button>
+        </button>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>

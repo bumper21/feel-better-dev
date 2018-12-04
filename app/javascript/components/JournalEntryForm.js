@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormGroup, OverlayTrigger, Radio, FormControl, Button, Tooltip, Alert} from 'react-bootstrap';
+import { FormGroup, OverlayTrigger, Radio, FormControl, Button, Tooltip} from 'react-bootstrap';
 import { JournalEntry } from '../packs/requests'
 
 

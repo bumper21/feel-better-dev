@@ -1,11 +1,41 @@
 
 body{
-  background-color: #0074D9;
+  background: url("/astronomy-comet-constellation-631477.jpg") no-repeat center center fixed;
+  background-size: cover;
+  
 }
 
-div#contentContainer {
-  width: 560px;
-  height: 100vh;
-  background-color: #fff;
-  margin: 0 auto;
+#reactComponent {
+  border-radius: 5px;
+  width: 25vw;
+  height: 30vw;  
+
+  margin: 10px;
+  background: white;
+}
+
+nav {
+  color: white;
+}
+
+a {
+  color: white;
+  
+}
+
+a:hover {
+  color: silver;
+  text-decoration: none;
+}
+
+
+button {
+  color: white;
+  border: 2px solid #001f3f;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+#feelBetterButton {
+  background-color: #3D9970;
 }

@@ -42,9 +42,9 @@ class ExerciseModal extends Component {
   render() {
     return (
       <div>
-        <Button bsStyle="primary" bsSize="large" onClick={this.handleShow}>
+        <button className="button" id="feelBetterButton" onClick={this.handleShow}>
           Feel Better
-        </Button>
+        </button>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
