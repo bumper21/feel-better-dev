@@ -61,7 +61,7 @@ class VideoButton extends Component {
 
     return (
       <div>
-        <button type="button" onClick={this.toggle}>
+        <button id="videoButton" onClick={this.toggle}>
           Watch Better
         </button>
           <div id="VideoDiv">

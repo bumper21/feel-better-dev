@@ -5,17 +5,21 @@ body{
   
 }
 
-#reactComponent {
-  border-radius: 5px;
-  width: 25vw;
-  height: 30vw;  
+#contentContainer {
+  height: 40vh;
+}
 
-  margin: 10px;
+#reactComponent {
+  border-radius: 10px;
+  width: 25vw;
+  height: 25vh;
   background: white;
+  opacity: 0.5;
 }
 
 nav {
   color: white;
+  margin-bottom: 30%;
 }
 
 a {
@@ -28,12 +32,19 @@ a:hover {
   text-decoration: none;
 }
 
+#buttonsDiv {
+  width: inherit;
+  height: inherit;
+
+}
+
 
 button {
   color: white;
   border: 2px solid #001f3f;
   border-radius: 7px;
   cursor: pointer;
+  padding: 10px;
 }
 
 #feelBetterButton {

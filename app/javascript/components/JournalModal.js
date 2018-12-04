@@ -32,7 +32,7 @@ class JournalModal extends Component {
 
     return (
       <div>
-        <button className="btn" onClick={this.handleShow}>
+        <button id="journalButton" onClick={this.handleShow}>
           Journal Better
         </button>
 

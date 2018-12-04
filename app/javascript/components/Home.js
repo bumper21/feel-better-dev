@@ -10,11 +10,9 @@ class Home extends Component {
 
   render () {
     return (
-        <div>
+        <div id="buttonsDiv">
           <ExerciseModal />
-          <br />
           <JournalModal />
-          <br />
           <VideoButton />
         </div>
     )
