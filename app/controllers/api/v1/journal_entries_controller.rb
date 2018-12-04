@@ -9,9 +9,10 @@ class Api::V1::JournalEntriesController < Api::ApplicationController
   def create
     journal_entry = JournalEntry.new journal_entry_params
     journal_entry.user = current_user
-
+    
     journal_entry.save!
     render json: journal_entry
+
     
   end
 
