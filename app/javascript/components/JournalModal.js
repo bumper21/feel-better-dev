@@ -37,7 +37,7 @@ class JournalModal extends Component {
         </button>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
-          <Modal.Header closeButton>
+          <Modal.Header>
             <Modal.Title>Your Journal Entry</Modal.Title>
           </Modal.Header>
           <Modal.Body onSubmit={this.handleClose}>

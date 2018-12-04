@@ -44,11 +44,11 @@ class JournalEntryForm extends React.Component {
     const feelingValues = [-5,-4,-3,-2,-1,0,1,2,3,4,5];
 
     return (
-      <form className="JournalEntryForm" onChange={this.handleChange} onSubmit={this.createJournalEntry} >
+      <form id="journalEntryForm" onChange={this.handleChange} onSubmit={this.createJournalEntry} >
         <FormGroup>
           <p>How are you{' '}
             <OverlayTrigger overlay={tooltip}>
-              <a href="#tooltip">feeling?</a>
+              <a id="tooltipLink" href="#tooltip">feeling?</a>
             </OverlayTrigger>{' '}
           </p>
         </FormGroup>
