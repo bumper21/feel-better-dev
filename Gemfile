@@ -20,7 +20,7 @@ gem 'webpacker', '~> 3.5'
 gem 'react-rails'
 gem 'pry-rails'
 gem 'hirb'
-gem 'bootstrap'
+gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 gem 'rack-cors'
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { Component } from 'react'
 import ExerciseModal from './ExerciseModal';
 import JournalModal from './JournalModal';
+import VideoButton from './VideoButton';
 // import { Player } from 'video-react';
 // 
 
@@ -9,15 +10,10 @@ class Home extends Component {
 
   render () {
     return (
-        <div>
-          {/* <Player>
-            <sourcesrc="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
-          </Player> */}
+        <div id="buttonsDiv">
           <ExerciseModal />
-          <button className="btn" name="VidModal"data-toggle="modal">Watch Better</button>
-          <br />
           <JournalModal />
-          <br />
+          <VideoButton />
         </div>
     )
   }

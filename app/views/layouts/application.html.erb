@@ -5,7 +5,11 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+     <%# <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
 
     <link href="home.scss" rel="stylesheet" type="scss">
 
@@ -20,23 +24,18 @@
     <header>
       <nav>
         <%= link_to 'Home Page', root_path %>
-        <% if user_signed_in? && current_user.admin? %>
-          <%= link_to 'Exercises', exercises_path %>
-          |
-          <%= link_to 'New Exercise', new_exercise_path %>
-        <% end %>
-        <% if user_signed_in? %>
-          Hello <%= current_user.first_name %>
-          |
-          <%= link_to 'Sign Out', sessions_path, method: :delete %>
-        <% else %>
-          |
-          <%= link_to 'Sign Up', new_user_path %>
-          |
-          <%= link_to 'Sign In', new_sessions_path %>
-        <% end %>
+          <% if user_signed_in? && current_user.admin? %>
+            <%= link_to 'Exercises', exercises_path %>
+            <%= link_to 'New Exercise', new_exercise_path%>
+          <% end %>
+          <% if user_signed_in? %>
+            Hello <%= current_user.first_name %>
+            <%= link_to 'Sign Out', sessions_path, method: :delete %>
+          <% else %>
+            <%= link_to 'Sign Up', new_user_path %>
+            <%= link_to 'Sign In', new_sessions_path %>
+          <% end %>
       </nav>
-      <hr>
     </header>
 
     <% flash.each do |type, message| %>
