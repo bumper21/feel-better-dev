@@ -1,4 +1,5 @@
 class JournalEntriesController < ApplicationController
+
   def new
     @journal_entry = JournalEntry.new
   end
@@ -13,6 +14,13 @@ class JournalEntriesController < ApplicationController
   end
 
   def index
+    @journal_entries = JournalEntry.where(user: current_user)
+    if current_user
+      render :index
+    else
+      redirect_to root_path
+    end
+
   end
 
   def edit
