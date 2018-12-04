@@ -1,1 +1,35 @@
 
+
+
+#journalCards {
+    background: rgba(255,255,255,0.8);
+    border-radius: 10px;
+    margin-right: 30vw;
+    height: auto;
+}
+
+#journalList li {
+  color: whitesmoke;
+  padding: 8px;
+}
+
+
+#journalIndexH1 {
+  margin: 80px;
+  color: whitesmoke;
+}
+
+#journalCards .card {
+  margin: 5px;
+}
+
+#journalCards .card-body {
+  color: black;
+}
+
+#journalCards .card-header {
+  color: steelblue;
+  font-size: 15px;
+
+}
+

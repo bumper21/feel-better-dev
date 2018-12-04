@@ -42,7 +42,7 @@ class ExerciseModal extends Component {
   render() {
     return (
       <div>
-        <button className="button" id="feelBetterButton" onClick={this.handleShow}>
+        <button id="feelBetterButton" onClick={this.handleShow}>
           Feel Better
         </button>
 

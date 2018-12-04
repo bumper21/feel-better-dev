@@ -1,0 +1,19 @@
+<ul id="journalList">
+  <% @journal_entries.each do |j| %>
+    <li>
+    <div class="card text-center" id="journalCards">
+      <div class="card-header">
+        Feeling: <%= j.feeling %>
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p> <%= j.body %> </p>
+          <footer class="blockquote-footer"><%= j.created_at %> </footer>
+        </blockquote>
+      </div>
+    </div>
+    </li>
+    
+  <% end %>
+
+  
