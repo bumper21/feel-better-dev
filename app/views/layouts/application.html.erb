@@ -11,6 +11,8 @@
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
 
+    <link href="home.scss" rel="stylesheet" type="scss">
+
     <%= javascript_pack_tag 'application' %>
     <%= javascript_include_tag 'application' %>
     
@@ -44,6 +46,9 @@
           </button>
         </div>
     <% end %>
+
+      <div id="modals">
+      </div>
 
     <%= yield %>
     </div>
