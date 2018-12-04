@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import { Button, Modal } from 'reactstrap';
+import { Button, Modal } from 'react-bootstrap';
 import JournalEntryForm from './JournalEntryForm';
 
 class JournalModal extends Component {
@@ -32,7 +32,7 @@ class JournalModal extends Component {
 
     return (
       <div>
-        <button type="button" onClick={this.handleShow}>
+        <button className="btn" onClick={this.handleShow}>
           Journal Better
         </button>
 
