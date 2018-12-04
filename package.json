@@ -7,7 +7,6 @@
     "babel-preset-react": "^6.24.1",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
-    "react-bootstrap": "^0.32.4",
     "react-dom": "^16.6.3",
     "react-player": "^1.7.0",
     "react-router": "^4.3.1",

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Component } from 'react';
-import { Button } from 'react-bootstrap';
 import YoutubeVideo from './YoutubeVideo';
 import YOUTUBE_API_KEY from './Api_keys';
 import axios from "axios"
@@ -54,15 +53,17 @@ class VideoButton extends Component {
     });
   }
 
-  
+  // <Button bsStyle="danger" bsSize="large" onClick={this.toggle}>
+  //   Watch Better
+  // </Button>
 
   render() {
 
     return (
       <div>
-        <Button bsStyle="danger" bsSize="large" onClick={this.toggle}>
+        <button type="button" onClick={this.toggle}>
           Watch Better
-        </Button>
+        </button>
           <div id="VideoDiv">
             { this.state.show && <YoutubeVideo data={ this.state.data }/>}
           </div>
