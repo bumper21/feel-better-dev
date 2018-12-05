@@ -1,23 +1,38 @@
 #reactComponent {
-  margin-top: 30vh;
-  margin-left: 15vw;
-  border-radius: 10px;
+  
+  margin-top: 20vh;
+  margin-left: 25vw;
+  border-radius: 8px;
   width: 30vw;
-  height: 30vh;
-  background: rgba(255,255,255,0.4);
+  height: 35vh;
+  background: rgba(255,255,255,0.5);
+  box-shadow: 10px 10px 70px rgba(255, 255, 255, 0.6);
 
+}
+
+@font-face {
+  font-family: mainButtonsFont;
+  src: url(/riesling.ttf);
+  
 }
 
 
 #buttonsDiv > div > button {
-  border-radius: 7px;
+  border-radius: 10px;
+  background-color: #edf0f5;
   cursor: pointer;
   margin: 5px;
-  padding: 10px;
-  width: 130px;
+  padding: 5px;
+  width: 150px;
+  height: 50px;
   text-align: center;
   display: inline-block;
-  border: none;
+  border-width: 2px;
+  border-color: #fcfdfd;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: mainButtonsFont, Arial, sans-serif;
+  opacity: .9;
 }
 
 #buttonsDiv {
@@ -38,9 +53,13 @@
 
 
 #feelBetterButton {
-color: white;
-background-image: url("/abstract-art-astronomy-220071.jpg");
-background-size: contain;
 
+color: black;
+position: right;
 
 }
+
+// .modal-container {
+//   display: flex; 
+//   justify-content: center; 
+// }

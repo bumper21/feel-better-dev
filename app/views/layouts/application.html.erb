@@ -23,15 +23,15 @@
     <div class="container" id="contentContainer">
     <header>
       <nav class="navbar navbar-default" id="navContainer">
-        <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" id="navBrand" href="/">
+            <a class="navbar-text navbar-left" id="navBrand" href="/">
               <span>Feel Better</span>
             </a>
-          <div class="navbar-brand" id="navLinks">
+          <p class="navbar-text navbar-right" id="navRight">
 
           <% if user_signed_in? %>
             <%= link_to 'Journal', journal_entries_path %>
+            Favorites
           <% end %>
 
           <% if user_signed_in? && current_user.admin? %>
@@ -46,10 +46,8 @@
             <%= link_to 'Sign Up', new_user_path %>
             <%= link_to 'Sign In', new_sessions_path %>
           <% end %>
-          </div>
+          </p>
         </div>
-      </div>
-
       </nav>
     </header>
 

@@ -2,7 +2,7 @@
   <% @journal_entries.each do |j| %>
     <div class="col-sm-6 col-md-6" id="journalEntry">
       <div class="panel panel-default">
-        <div class="panel-heading"> 
+        <div class="panel-heading" id="journalPanelHeading"> 
            Journal entry written on <%=j.created_at %>
         </div>
         <div class="panel-body"> 
