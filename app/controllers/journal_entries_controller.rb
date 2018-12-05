@@ -14,7 +14,7 @@ class JournalEntriesController < ApplicationController
   end
 
   def index
-    @journal_entries = JournalEntry.where(user: current_user)
+    @journal_entries = JournalEntry.where(user: current_user).order(created_at: :desc)
     if current_user
       render :index
     else

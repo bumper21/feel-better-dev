@@ -31,7 +31,7 @@ class JournalModal extends Component {
   render() {
 
     return (
-      <div>
+      <div className="modal-container">
         <button id="journalButton" onClick={this.handleShow}>
           Journal Better
         </button>
