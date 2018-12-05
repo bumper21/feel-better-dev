@@ -1,35 +1,30 @@
-
-
-
-#journalCards {
-    background: rgba(255,255,255,0.8);
-    border-radius: 10px;
-    margin-right: 30vw;
-    height: auto;
+#journalEntry {
+  display: inline-block;
+  padding: 25px;
+  
 }
 
-#journalList li {
-  color: whitesmoke;
-  padding: 8px;
+#journalEntry div {
+  opacity: .9;
+  font-size: 18px;
+  border: 0px;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+#journalEntry .panel-footer {
+  background: black;
+  color: white;
+}
+
+#journalEntry .panel-heading {
+  background: #020718;
+  color: white;
+  border-radius: 0;
+}
 
 #journalIndexH1 {
-  margin: 80px;
-  color: whitesmoke;
+  color: snow;
+  padding-top: 5vh;
+  padding-left: 2vw;
 }
-
-#journalCards .card {
-  margin: 5px;
-}
-
-#journalCards .card-body {
-  color: black;
-}
-
-#journalCards .card-header {
-  color: steelblue;
-  font-size: 15px;
-
-}
-

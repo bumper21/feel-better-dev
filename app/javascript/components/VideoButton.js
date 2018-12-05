@@ -14,8 +14,6 @@ const options =  {
   playlistId: playlistId
 }
 
-// console.log(this.state.data[0].snippet.resourceId.videoId)
-
 class VideoButton extends Component {
   constructor(props) {
     super(props);
@@ -42,7 +40,6 @@ class VideoButton extends Component {
       this.setState({
         data: res.data.items
       })
-      // console.log(this.state.data)
     })
   }
 
@@ -52,10 +49,6 @@ class VideoButton extends Component {
       show: !this.state.show
     });
   }
-
-  // <Button bsStyle="danger" bsSize="large" onClick={this.toggle}>
-  //   Watch Better
-  // </Button>
 
   render() {
 

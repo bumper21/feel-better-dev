@@ -8,7 +8,7 @@ const YoutubeVideo = props => {
     )
   )
 
-  function randomVidUrl(urls) {
+  const randomVidUrl = (urls) => {
     return ( urls[Math.floor(Math.random()*urls.length)])
   }
 
