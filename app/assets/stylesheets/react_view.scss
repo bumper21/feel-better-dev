@@ -1,5 +1,5 @@
 #reactComponent {
-  
+  display: flex;
   margin-top: 20vh;
   margin-left: 25vw;
   border-radius: 8px;
@@ -36,7 +36,7 @@
 }
 
 #buttonsDiv {
-  padding: 10px;
+  display: inherit;
 }
 
 #tooltipLink {
@@ -44,22 +44,8 @@
   font-size: 14px;
 }
 
-// .modal-container {
-//   position: relative;
-// }
-// .modal-container .modal, .modal-container .modal-backdrop {
-//   position: absolute;
-// }
-
-
 #feelBetterButton {
-
 color: black;
 position: right;
-
 }
 
-// .modal-container {
-//   display: flex; 
-//   justify-content: center; 
-// }
