@@ -1,19 +1,22 @@
-<ul id="journalList">
+<div class="row">
   <% @journal_entries.each do |j| %>
-    <li>
-    <div class="card text-center" id="journalCards">
-      <div class="card-header">
-        Feeling: <%= j.feeling %>
-      </div>
-      <div class="card-body">
-        <blockquote class="blockquote mb-0">
-          <p> <%= j.body %> </p>
-          <footer class="blockquote-footer"><%= j.created_at %> </footer>
-        </blockquote>
-      </div>
+    <div class="col-sm-6 col-md-6" id="journalEntry">
+      <div class="panel panel-default">
+        <div class="panel-heading"> 
+           Journal entry written on <%=j.created_at %>
+        </div>
+        <div class="panel-body"> 
+          <small> 
+            When I wrote this, I was feeling like a <span> <%= j.feeling %> </span>
+          </small>
+          <br/>
+          <br/>
+           <%= j.body %> 
+          <br/>
+          <br/>
+          <%= j.user.first_name %>
+        </div>
     </div>
-    </li>
-    
+  </div>
   <% end %>
-
-  
+</div>

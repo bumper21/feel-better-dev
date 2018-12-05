@@ -1,21 +1,53 @@
-nav {
-  color: white;
-  font-size: 18px;
-  margin: 3%;
-  text-align: right;
+// nav {
+//   color: white;
+//   font-size: 18px;
+//   margin: 3%;
+//   text-align: right;
   
   
+// }
+
+// nav > a {
+//   color: white;
+//   padding: 15px;
+//   font-size: 18px;
+  
+  
+// }
+
+// nav > a:hover {
+//   color: steelblue;
+//   text-decoration: none;
+// }
+
+// #navContainer {
+//   background: rgba(255,255,255,0.2)
+// }
+
+// .navbar-header {
+//   text-align: right;
+//   width: inher
+// }
+
+// .container-fluid {
+//   width: inherit;
+// }
+
+#navContainer {
+  background: rgba(255,255,255,0);
+  border: none;
 }
 
-nav > a {
-  color: white;
-  padding: 15px;
-  font-size: 18px;
-  
-  
+#navLinks {
+  opacity: 1;
+  color: whitesmoke;
 }
 
-nav > a:hover {
-  color: steelblue;
-  text-decoration: none;
+#navLinks a {
+  color: whitesmoke;
 }
+
+#navBrand {
+  color: whitesmoke;
+}
+
