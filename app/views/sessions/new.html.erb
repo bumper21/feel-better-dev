@@ -1,7 +1,9 @@
-<h1>Sign In</h1>
+<h1 id="signInTitle">Sign In</h1>
 
-<%= simple_form_for "", url: sessions_path do |f| %>
+<%= simple_form_for "", id: "signInForm", url: sessions_path do |f| %>
   <%= f.input :email %>
   <%= f.input :password %>
-  <%= submit_tag 'Sign In', class: "btn btn-primary" %>
+  <div id="signInButton">
+  <%= submit_tag 'Sign In', class: "button" %>
+  </div>
 <% end %>

@@ -13,7 +13,7 @@
   margin-left: 35vw;
   border-radius: 8px;
   background: rgba(255,255,255,0.5);
-  box-shadow: 10px 10px 70px rgba(255, 255, 255, 0.6);
+  box-shadow: 10px 10px 100px rgba(255, 255, 255, 0.6);
 
 }
 
@@ -42,6 +42,11 @@
   opacity: .9;
 }
 
+#buttonsDiv > div > button:hover {
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+}
 // #buttonsDiv {
 //   display: inherit;
 // }
