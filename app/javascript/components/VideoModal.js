@@ -11,7 +11,7 @@ const playlistId = `PLVpJ_ku_DBpYQCtNK7pyuGW30kEbfC4bU`
 const options =  {
   part: `snippet`,
   key: YOUTUBE_API_KEY,
-  maxResults: 10,
+  maxResults: 15,
   playlistId: playlistId
 }
 
@@ -56,7 +56,8 @@ class VideoModal extends Component {
   }
 
   render() {
-
+    if(this.state.data === []) { return }
+    
     return (
       <div className="modal-container">
         <button id="VideoButton" onClick={this.handleShow}>
