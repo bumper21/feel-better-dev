@@ -47,7 +47,7 @@
 }
 
 #tooltipLink {
-  color: rgb(37, 12, 126);
+  font-style: italic;
   font-size: 18px;
   border: 3px, small, black;
 }
@@ -81,4 +81,11 @@ position: right;
 .modal {
   margin-top: 20vh;
   
+}
+
+#journalSubmitBtn {
+  size: 25px;
+}
+#placeHolder {
+  font-size: 17px;
 }

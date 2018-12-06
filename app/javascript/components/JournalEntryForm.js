@@ -66,9 +66,9 @@ class JournalEntryForm extends React.Component {
         </FormGroup>
 
         <FormGroup>
-          <FormControl name="body" componentClass="textarea" rows={5} placeholder="What are your thoughts? Try reading them outloud after writing them down." />
+          <FormControl id="placeHolder" name="body" componentClass="textarea" rows={5} placeholder="What are your thoughts? Try reading them outloud after writing them down." />
         </FormGroup>
-        <Button type="submit" value="submit">Save this Entry</Button>
+        <Button id= "journalSubmitBtn" type="submit" value="submit">Save this Entry</Button>
     </form>
 
   )}
