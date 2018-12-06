@@ -1,10 +1,14 @@
+#journalRow {
+  margin-top: 25vh;
+}
+
 #journalEntry {
   display: inline-block;
   padding: 25px;
   
 }
 
-#journalEntry div {
+#journalEntry > div {
   opacity: .9;
   font-size: 18px;
   border: 0px;
@@ -23,8 +27,8 @@
   border-radius: 0;
 }
 
-#journalIndexH1 {
-  color: snow;
-  padding-top: 5vh;
-  padding-left: 2vw;
-}
+// #journalIndexH1 {
+//   color: snow;
+//   padding-top: 5vh;
+//   padding-left: 2vw;
+// }
