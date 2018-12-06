@@ -9,7 +9,7 @@ const YoutubeVideo = props => {
   )
 
   const randomVidUrl = (urls) => {
-    return ( urls[Math.floor(Math.random()*urls.length)])
+    return (urls[Math.floor(Math.random()*urls.length)])
   }
 
   const finalUrl = (

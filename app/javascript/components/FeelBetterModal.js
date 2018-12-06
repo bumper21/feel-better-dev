@@ -3,7 +3,7 @@ import { Component } from 'react'
 import { Button, Modal } from 'react-bootstrap';
 import { Exercise } from '../packs/requests';
 
-class ExerciseModal extends Component {
+class FeelBetterModal extends Component {
   constructor(props, context) {
     super(props, context);
 
@@ -62,4 +62,4 @@ class ExerciseModal extends Component {
   }
 }
 
-export default ExerciseModal;
+export default FeelBetterModal;
