@@ -6,13 +6,17 @@
            Journal entry written on <%=j.created_at %>
         </div>
         <div class="panel-body"> 
-          When I wrote this, I was a <span> <%= j.feeling %> </span>
+          <div id="feelingPanel"> 
+            Feeling <span> <%= j.feeling %> </span>
+          </div>
           <br/>
-          <br/>
+          <div id="journalBodyPanel">
            <%= j.body %> 
+          </div>
           <br/>
-          <br/>
-          <%= j.user.first_name %>
+          <div id="journalNamePanel">
+            <%= j.user.first_name %>
+          </div>
         </div>
     </div>
   </div>
