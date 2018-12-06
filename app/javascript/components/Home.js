@@ -1,20 +1,35 @@
 import React from 'react';
 import { Component } from 'react'
-import ExerciseModal from './ExerciseModal';
+import ExerciseModal from './FeelBetterModal';
 import JournalModal from './JournalModal';
-import VideoButton from './VideoButton';
-// import { Player } from 'video-react';
-// 
+import VideoModal from './VideoModal';
+
+
+
+
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      show: false,
+      data: [],
+  
+    };
+  }
+
 
   render () {
+
     return (
+      <div>
         <div id="buttonsDiv">
           <ExerciseModal />
           <JournalModal />
-          <VideoButton />
+          <VideoModal />
         </div>
+      </div>
     )
   }
 }

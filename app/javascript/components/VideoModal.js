@@ -1,5 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
+import { Button, Modal } from 'react-bootstrap';
 import YoutubeVideo from './YoutubeVideo';
 import YOUTUBE_API_KEY from './Api_keys';
 import axios from "axios"
@@ -14,25 +15,27 @@ const options =  {
   playlistId: playlistId
 }
 
-class VideoButton extends Component {
+class VideoModal extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      // loading: true,
       show: false,
       data: []
   
     };
-
-    this.toggle = this.toggle.bind(this)
+    
     this.getVideoData = this.getVideoData.bind(this)
+    this.handleShow = this.handleShow.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
   componentDidMount() {
     this.getVideoData()
   
   }
-
+  
   getVideoData() {
     axios.get(PLAYLIST_URL, {
       params: options
@@ -44,25 +47,30 @@ class VideoButton extends Component {
   }
 
 
-  toggle() {
-    this.setState({
-      show: !this.state.show
-    });
+  handleClose() {
+    this.setState({ show: false });
+  }
+
+  handleShow() {
+    this.setState({ show: true });
   }
 
   render() {
 
     return (
-      <div>
-        <button id="videoButton" onClick={this.toggle}>
-          Watch Better
+      <div className="modal-container">
+        <button id="VideoButton" onClick={this.handleShow}>
+          View Better
         </button>
-          <div id="VideoDiv">
-            { this.state.show && <YoutubeVideo data={ this.state.data }/>}
-          </div>
+
+        <Modal id="videoModal" show={this.state.show} onHide={this.handleClose}>
+          <Modal.Body className="player-wrapper">
+            <YoutubeVideo data={this.state.data} />
+          </Modal.Body>
+        </Modal>
       </div>
     );
   }
 }
 
-export default VideoButton;
+export default VideoModal;

@@ -5,11 +5,12 @@ const YoutubeVideo = props => {
   const videoUrls = (
     props.data.map(data => (
       data.snippet.resourceId.videoId)
-    )
+    ) 
   )
+  
 
   const randomVidUrl = (urls) => {
-    return ( urls[Math.floor(Math.random()*urls.length)])
+    return (urls[Math.floor(Math.random()*urls.length)])
   }
 
   const finalUrl = (
@@ -17,9 +18,14 @@ const YoutubeVideo = props => {
   )
 
   return (
-    <div>
-      <ReactPlayer url={finalUrl} autoPlay={false} />
-    </div>
+  
+    <ReactPlayer 
+      className="react-player"
+      url={finalUrl} 
+      width='100%' 
+      height='100%'
+      autoPlay={false} 
+      />
   )
 }
   
