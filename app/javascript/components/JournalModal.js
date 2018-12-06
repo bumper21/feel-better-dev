@@ -36,7 +36,7 @@ class JournalModal extends Component {
           Journal Better
         </button>
 
-        <Modal show={this.state.show} onHide={this.handleClose}>
+        <Modal id="journalModal" show={this.state.show} onHide={this.handleClose}>
           <Modal.Header>
             <Modal.Title>Your Journal Entry</Modal.Title>
           </Modal.Header>

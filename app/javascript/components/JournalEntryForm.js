@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormGroup, OverlayTrigger, Radio, FormControl, Button, Tooltip} from 'react-bootstrap';
+import { FormGroup, OverlayTrigger, ToggleButtonGroup, ToggleButton, Button, FormControl,  Tooltip, ButtonToolbar} from 'react-bootstrap';
 import { JournalEntry } from '../packs/requests'
 
 
@@ -53,22 +53,26 @@ class JournalEntryForm extends React.Component {
           </p>
         </FormGroup>
 
-        <FormGroup >
-          {
-            feelingValues.map((value) => {
-              return(
-                <Radio name="feeling" key={value} value={value} inline>
-                  {`${value}`}
-                </Radio>
-              )
-            })
-          }  
+        <FormGroup id="radioButtons" >
+          <ButtonToolbar>
+            <ToggleButtonGroup name="options">
+              { 
+                feelingValues.map((value) => {
+                  return(
+                    <ToggleButton id="feeling" key={value} value={value}>
+                      <p>{`${value}`}</p>
+                    </ToggleButton>
+                  )
+                })
+              }  
+            </ToggleButtonGroup>
+          </ButtonToolbar>
         </FormGroup>
 
         <FormGroup>
           <FormControl id="placeHolder" name="body" componentClass="textarea" rows={5} placeholder="What are your thoughts? Try reading them outloud after writing them down." />
         </FormGroup>
-        <Button id= "journalSubmitBtn" type="submit" value="submit">Save this Entry</Button>
+        <Button id= "journalSubmitBtn" type="submit" value="submit"> </Button>
     </form>
 
   )}
