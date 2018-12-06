@@ -23,15 +23,13 @@ class JournalEntryForm extends React.Component {
   createJournalEntry(event) {
     event.preventDefault();
     JournalEntry.create(this.state)
-    console.log(this.state)
 
   }
 
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value})
-    console.log(this.state)
-
+    
   }
 
   render() {
@@ -42,6 +40,7 @@ class JournalEntryForm extends React.Component {
       );
 
     const feelingValues = [-5,-4,-3,-2,-1,0,1,2,3,4,5];
+
 
     return (
       <form id="journalEntryForm" onChange={this.handleChange} onSubmit={this.createJournalEntry} >

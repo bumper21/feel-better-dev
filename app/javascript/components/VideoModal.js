@@ -20,7 +20,6 @@ class VideoModal extends Component {
     super(props);
 
     this.state = {
-      // loading: true,
       show: false,
       data: []
   
@@ -33,7 +32,7 @@ class VideoModal extends Component {
 
   componentDidMount() {
     this.getVideoData()
-  
+    
   }
   
   getVideoData() {
@@ -41,7 +40,9 @@ class VideoModal extends Component {
       params: options
     }).then(res => {
       this.setState({
-        data: res.data.items
+        data: res.data.items.map(data => (
+          data.snippet.resourceId.videoId)
+        )
       })
     })
   }
@@ -59,16 +60,17 @@ class VideoModal extends Component {
     if(this.state.data === []) { return }
     
     return (
-      <div className="modal-container">
+      <div>
         <button id="VideoButton" onClick={this.handleShow}>
           View Better
         </button>
-
+        
         <Modal id="videoModal" show={this.state.show} onHide={this.handleClose}>
           <Modal.Body className="player-wrapper">
             <YoutubeVideo data={this.state.data} />
           </Modal.Body>
         </Modal>
+
       </div>
     );
   }

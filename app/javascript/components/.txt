@@ -3,9 +3,12 @@ import ReactPlayer from 'react-player';
 
 const YoutubeVideo = props => {
   const videoUrls = (
-    props.data
+    props.data.map(data => (
+      data.snippet.resourceId.videoId)
+    ) 
   )
   
+
   const randomVidUrl = (urls) => {
     return (urls[Math.floor(Math.random()*urls.length)])
   }
@@ -27,3 +30,22 @@ const YoutubeVideo = props => {
 }
   
   export default YoutubeVideo;
+
+
+
+
+
+
+
+
+
+
+  getVideoData() {
+    axios.get(PLAYLIST_URL, {
+      params: options
+    }).then(res => {
+      this.setState({
+        data: res.data.items
+      })
+    })
+  }

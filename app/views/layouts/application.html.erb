@@ -38,8 +38,8 @@
             <% end %>
 
             <% if user_signed_in? && current_user.admin? %>
-              <li> <%= link_to 'Exercises', exercises_path %> </li>
-              <li> <%= link_to 'New Exercise', new_exercise_path%> </li>
+              <li> <%= link_to 'MHExercises', exercises_path %> </li>
+              <li> <%= link_to 'New MHExercise', new_exercise_path%> </li>
             <% end %>
 
             <% if user_signed_in? %>
