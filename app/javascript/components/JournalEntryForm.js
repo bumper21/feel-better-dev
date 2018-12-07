@@ -29,7 +29,7 @@ class JournalEntryForm extends React.Component {
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value})
-    
+  
   }
 
   render() {
@@ -52,14 +52,14 @@ class JournalEntryForm extends React.Component {
           </p>
         </FormGroup>
 
-        <FormGroup id="radioButtons" >
+        <FormGroup id="radioButtons">
           <ButtonToolbar>
-            <ToggleButtonGroup name="options">
+            <ToggleButtonGroup name="feeling" type="radio">
               { 
                 feelingValues.map((value) => {
                   return(
-                    <ToggleButton id="feeling" key={value} value={value}>
-                      <p>{`${value}`}</p>
+                    <ToggleButton name="feeling" key={value} value={value}>
+                      {`${value}`}
                     </ToggleButton>
                   )
                 })
