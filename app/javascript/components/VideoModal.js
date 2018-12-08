@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import { Button, Modal } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import YoutubeVideo from './YoutubeVideo';
 import YOUTUBE_API_KEY from './Api_keys';
 import axios from "axios"
@@ -62,7 +62,7 @@ class VideoModal extends Component {
     return (
       <div>
         <button id="VideoButton" onClick={this.handleShow}>
-          View Better
+          Watch Better
         </button>
         
         <Modal id="videoModal" show={this.state.show} onHide={this.handleClose}>
