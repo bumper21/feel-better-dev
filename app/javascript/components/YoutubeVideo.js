@@ -14,7 +14,6 @@ const YoutubeVideo = props => {
     "http://www.youtube.com/watch?v=" + randomVidUrl(videoUrls) + "&t=79s&index=2&list=PLVpJ_ku_DBpYQCtNK7pyuGW30kEbfC4bU"
   )
 
-
   return (
     <ReactPlayer 
       className="react-player"
