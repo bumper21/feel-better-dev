@@ -1,19 +1,36 @@
-// #contentContainer h1 {
-//   color: white;
-//   margin: 10vw;
-// }
-
-// #contentContainer li {
-//   color: whitesmoke;
-//   padding: 8px;
-// }
-
 
 #exerciseList {
   color: whitesmoke;
+  font-size: 20px;
+  margin-left: 0px;
+  list-style-type: none;
+  padding-inline-start: 0px;
+
+}
+
+#exerciseList li {
+  border: 3px solid white;
+  padding: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  
+}
+
+#exerciseList li a {
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 
 #exerciseH1 {
-  color: whitesmoke;
-  margin-left: 25px;
+    background :rgba(255, 255, 255, 0.2);
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    display:flex;
+    font-family: mainButtonsFont, Arial, sans-serif;
+    color: snow;
+    font-size: 65px;
+    justify-content: center;
+    border: 3px solid white;
+    border-radius: 5px;
 }
