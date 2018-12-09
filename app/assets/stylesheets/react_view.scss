@@ -116,34 +116,24 @@ position: right;
   font-size: 17px;
 }
 
-#radioButtons {
-  display: flex;
-  // justify-content: center;
-  
-}
-
-#radioButtons .btn {
-  background-color: white;
-  color: black;
-  font-size: 16px;
-  border: 1px solid black;
-  
-}
-
-#radioButtons .btn:hover {
-  border: 2px solid black;
-  background-color: white;
-  width: 80px;
-  height: 60px;
-}
-
-#radioButtons .active:hover{
-  background-color: rgb(25, 14, 88);
+select:hover {
+  background-color: black;
   color: white;
 }
 
-#radioButtons .active {
-  background-color: rgb(25, 14, 88);
+select option {
+  background-color: black;
   color: white;
 }
+
+#journalEntryFeelingForm {
+  display: inline-flex;
+
+}
+
+#journalEntryFeelingForm p {
+  margin-bottom: 0px;
+  padding-right: 2px;
+}
+
 

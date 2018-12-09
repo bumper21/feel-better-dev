@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormGroup, OverlayTrigger, ToggleButtonGroup, ToggleButton, Button, FormControl,  Tooltip, ButtonToolbar} from 'react-bootstrap';
+import { FormGroup, OverlayTrigger, ToggleButtonGroup, ToggleButton, Button, FormControl,  Tooltip, ButtonGroup, ButtonToolbar} from 'react-bootstrap';
 import { JournalEntry } from '../packs/requests'
 
 
@@ -15,9 +15,7 @@ class JournalEntryForm extends React.Component {
     };
     
     this.handleChange = this.handleChange.bind(this);
-    this.createJournalEntry = this.createJournalEntry.bind(this);
-
-    
+    this.createJournalEntry = this.createJournalEntry.bind(this); 
   }
 
   createJournalEntry(event) {
@@ -29,7 +27,7 @@ class JournalEntryForm extends React.Component {
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value})
-  
+    console.log(e.target.name, e.target.value)
   }
 
   render() {
@@ -44,28 +42,22 @@ class JournalEntryForm extends React.Component {
 
     return (
       <form id="journalEntryForm" onChange={this.handleChange} onSubmit={this.createJournalEntry} >
-        <FormGroup>
-          <p>How are you{' '}
-            <OverlayTrigger overlay={tooltip}>
-              <a id="tooltipLink" href="#tooltip">feeling?</a>
-            </OverlayTrigger>{' '}
-          </p>
-        </FormGroup>
-
-        <FormGroup id="radioButtons">
-          <ButtonToolbar>
-            <ToggleButtonGroup name="feeling" type="radio">
-              { 
-                feelingValues.map((value) => {
-                  return(
-                    <ToggleButton name="feeling" key={value} value={value}>
-                      {`${value}`}
-                    </ToggleButton>
-                  )
-                })
-              }  
-            </ToggleButtonGroup>
-          </ButtonToolbar>
+        <FormGroup id="journalEntryFeelingForm">
+          <p>How are you</p>
+          <select name="feeling" defaultValue="default">
+            <option disabled value="default">
+              feeling?
+            </option>
+            {
+              feelingValues.map((value) => {
+                return(
+                  <option value={value} key={value}>
+                    {`${value}`}
+                  </option>
+                )
+              })
+            }
+          </select>
         </FormGroup>
 
         <FormGroup>
