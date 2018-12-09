@@ -43,11 +43,11 @@ class JournalEntryForm extends React.Component {
     return (
       <form id="journalEntryForm" onChange={this.handleChange} onSubmit={this.createJournalEntry} >
         <FormGroup id="journalEntryFeelingForm">
-          <p>How are you</p>
-          <select name="feeling" defaultValue="default">
-            <option disabled value="default">
-              feeling?
-            </option>
+          <p>How are you</p>{' '}
+          <OverlayTrigger overlay={tooltip}>
+            <a id="tooltipLink" href="#tooltip">feeling?</a>
+          </OverlayTrigger>{' '}
+          <select name="feeling" defaultValue={0}>
             {
               feelingValues.map((value) => {
                 return(
@@ -61,7 +61,7 @@ class JournalEntryForm extends React.Component {
         </FormGroup>
 
         <FormGroup>
-          <FormControl id="placeHolder" name="body" componentClass="textarea" rows={5} placeholder="What are your thoughts? Try reading them outloud after writing them down." />
+          <FormControl id="placeHolder" name="body" componentClass="textarea" rows={14} placeholder="What are your thoughts? Try reading them outloud after writing them down." />
         </FormGroup>
         <Button id= "journalSubmitBtn" type="submit" value="submit"> </Button>
     </form>
