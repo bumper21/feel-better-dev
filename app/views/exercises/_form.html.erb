@@ -1,7 +1,7 @@
 <%= simple_form_for(@exercise) do |f| %>
 
   <%= f.input :title %>
-  <%= f.input :body %>
+  <%= f.input :body, :input_html => {:rows => 10} %>
 
-  <%= f.submit class: "btn btn-outline-primary" %>
+  <%= f.submit class: "button", value: "Create" %>
 <% end %>

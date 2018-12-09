@@ -1,0 +1,32 @@
+#newExerciseHeading {
+  background :rgba(255, 255, 255, 0.2);
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  display:flex;
+  font-family: mainButtonsFont, Arial, sans-serif;
+  color: snow;
+  font-size: 65px;
+  justify-content: center;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+// #new_exercise {
+// }
+
+#new_exercise label {
+  color: white;
+  font-size: 18px;
+}
+
+#new_exercise .button {
+  width: 100px;
+  height: 45px;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+#new_exercise .button:hover {
+  color: white;
+  background: black;
+}
