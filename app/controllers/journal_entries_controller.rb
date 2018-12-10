@@ -1,4 +1,7 @@
 class JournalEntriesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :find_journal_entry, only: [:destroy, :show, :edit, :update]
+  before_action :authorize_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def new
     @journal_entry = JournalEntry.new
@@ -30,6 +33,10 @@ class JournalEntriesController < ApplicationController
   end
 
   def destroy
+    if @journal_entry.destroy
+      flash[:success] = "Journal Erased"
+    end
+    redirect_to journal_entries_path
   end
 
   private
@@ -39,7 +46,14 @@ class JournalEntriesController < ApplicationController
   end
 
   def find_journal_entry
-    @journal_entry = @JournalEntry.find params[:id]
+    @journal_entry = JournalEntry.find params[:id]
+  end
+
+  def authorize_user!
+    unless can? :crud, @journal_entry
+      flash[:danger] = "Unauthorized to erase"
+      redirect_to root_path
+    end
   end
   
 end

@@ -17,6 +17,17 @@
           <div id="journalNamePanel">
             <%= j.user.first_name %>
           </div>
+          <div id="journalEntryDelete">
+          <% if can?(:delete, j) %>
+            <%= link_to(
+              "Erase",
+              journal_entry_path(j),
+              method: :delete,
+              class: :button,
+              data: { confirm: "Are you sure?" }
+            ) %>
+          <% end %>
+          </div>
         </div>
     </div>
   </div>
