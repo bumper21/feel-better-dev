@@ -1,5 +1,6 @@
 import React from 'react';
-import { FormGroup, OverlayTrigger, ToggleButtonGroup, ToggleButton, Button, FormControl,  Tooltip, ButtonGroup, ButtonToolbar} from 'react-bootstrap';
+import { FormGroup, OverlayTrigger, Button, FormControl, Tooltip } from 'react-bootstrap';
+import SuccessAlert from './Alerts/SuccessAlert';
 import { JournalEntry } from '../packs/requests'
 
 
@@ -11,7 +12,8 @@ class JournalEntryForm extends React.Component {
 
     this.state = {
       feeling: 0,
-      body: ' '
+      body: ' ',
+      alert_message: null
     };
     
     this.handleChange = this.handleChange.bind(this);
@@ -21,7 +23,8 @@ class JournalEntryForm extends React.Component {
   createJournalEntry(event) {
     event.preventDefault();
     JournalEntry.create(this.state)
-
+    this.setState({alert_message: "success"})
+    console.log(this.state.alert_message)
   }
 
 
@@ -39,33 +42,39 @@ class JournalEntryForm extends React.Component {
 
     const feelingValues = [-5,-4,-3,-2,-1,0,1,2,3,4,5];
 
-
     return (
-      <form id="journalEntryForm" onChange={this.handleChange} onSubmit={this.createJournalEntry} >
-        <FormGroup id="journalEntryFeelingForm">
-          <p>How are you</p>{' '}
-          <OverlayTrigger overlay={tooltip}>
-            <a id="tooltipLink" href="#tooltip">feeling?</a>
-          </OverlayTrigger>{' '}
-          <select name="feeling" defaultValue={0}>
-            {
-              feelingValues.map((value) => {
-                return(
-                  <option value={value} key={value}>
-                    {`${value}`}
-                  </option>
-                )
-              })
-            }
-          </select>
-        </FormGroup>
+      <div>
 
-        <FormGroup>
-          <FormControl id="placeHolder" name="body" componentClass="textarea" rows={10} placeholder="What are your thoughts? Try reading them outloud after writing them down." />
-        </FormGroup>
-        <Button id= "journalSubmitBtn" type="submit" value="submit"> </Button>
-    </form>
+        {this.state.alert_message == "success" ? <SuccessAlert /> : null}
 
+        <form id="journalEntryForm" onChange={this.handleChange} onSubmit={this.createJournalEntry} >
+
+          <FormGroup id="journalEntryFeelingForm">
+            <p>How are you</p>{' '}
+            <OverlayTrigger overlay={tooltip}>
+              <a id="tooltipLink" href="#tooltip">feeling?</a>
+            </OverlayTrigger>{' '}
+            <select name="feeling" defaultValue={0}>
+              {
+                feelingValues.map((value) => {
+                  return(
+                    <option value={value} key={value}>
+                      {`${value}`}
+                    </option>
+                  )
+                })
+              }
+            </select>
+          </FormGroup>
+
+          <FormGroup>
+            <FormControl id="placeHolder" name="body" componentClass="textarea" rows={10} placeholder="What are your thoughts? Try reading them outloud after writing them down." />
+          </FormGroup>
+
+          <Button id= "journalSubmitBtn" type="submit" value="submit"> </Button>
+
+        </form>
+      </div>
   )}
 }
 
