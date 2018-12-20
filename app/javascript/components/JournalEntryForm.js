@@ -1,7 +1,9 @@
 import React from 'react';
 import { FormGroup, OverlayTrigger, Button, FormControl, Tooltip } from 'react-bootstrap';
 import SuccessAlert from './Alerts/SuccessAlert';
-import { JournalEntry } from '../packs/requests'
+import DangerAlert from './Alerts/DangerAlert';
+import { JournalEntry } from '../packs/requests';
+import './JournalEntryStyling/JournalAlert.css';
 
 
 
@@ -11,9 +13,9 @@ class JournalEntryForm extends React.Component {
 
 
     this.state = {
-      feeling: 0,
+      feeling: null,
       body: ' ',
-      alert_message: null
+      alert: null
     };
     
     this.handleChange = this.handleChange.bind(this);
@@ -22,9 +24,12 @@ class JournalEntryForm extends React.Component {
 
   createJournalEntry(event) {
     event.preventDefault();
-    JournalEntry.create(this.state)
-    this.setState({alert_message: "success"})
-    console.log(this.state.alert_message)
+    if (this.state.body !== undefined && this.state.body.length >= 3 && this.state.feeling !== null){
+      JournalEntry.create(this.state)
+      this.setState({alert: "success"})
+    } else {
+      this.setState({alert: "danger"})
+    }
   }
 
 
@@ -44,8 +49,10 @@ class JournalEntryForm extends React.Component {
 
     return (
       <div>
-
-        {this.state.alert_message == "success" ? <SuccessAlert /> : null}
+        <div id="journalAlert">
+        {this.state.alert == "success" ? <SuccessAlert /> : null}
+        {this.state.alert == "danger" ? <DangerAlert /> : null}
+        </div>
 
         <form id="journalEntryForm" onChange={this.handleChange} onSubmit={this.createJournalEntry} >
 
