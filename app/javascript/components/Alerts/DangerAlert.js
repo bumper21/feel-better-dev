@@ -1,18 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Alert } from 'react-bootstrap';
 
-export default class DangerAlert extends Component {
-  constructor(props) {
-    super(props);
-    console.log("These are the props", props.errors)
+const DangerAlert = props => (
+   
+    <Alert bsStyle="danger">
+      <ul>
+        { props.errors.body !== undefined ?
+         ( props.errors.body.map(error => (
+          <li key={error}>
+            Journal Entry {error}
+          </li>
+          )
+        )) : null }
 
-  }
-  
-  render() {
-    return (
-      <Alert bsStyle="danger">
-        <strong> Error </strong> Your entry has not been saved. Please make sure you've written something and given "Feeling" a value.
-      </Alert> 
-    )
-  }
-}
+        {props.errors.feeling !== undefined ? 
+          ( props.errors.feeling.map(error => (
+            <li key={error}>
+              Feeling rating {error}
+            </li>
+          )
+        )) : null }
+        
+      </ul>
+    </Alert> 
+)
+
+export default DangerAlert;

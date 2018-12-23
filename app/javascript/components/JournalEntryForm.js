@@ -32,7 +32,9 @@ class JournalEntryForm extends React.Component {
         this.setState({errors: res.message})
         this.setState({alert: "danger"})
         console.log(this.state.errors)
-      }
+      } else (
+        this.setState({alert: "success"})
+      )
     })
 
   }
@@ -66,7 +68,10 @@ class JournalEntryForm extends React.Component {
             <OverlayTrigger overlay={tooltip}>
               <a id="tooltipLink" href="#tooltip">feeling?</a>
             </OverlayTrigger>{' '}
-            <select name="feeling" defaultValue={0}>
+            <select name="feeling" >
+              <option defaultValue="select" >
+                
+              </option>
               {
                 feelingValues.map((value) => {
                   return(
