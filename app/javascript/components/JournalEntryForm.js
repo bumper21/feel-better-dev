@@ -15,7 +15,8 @@ class JournalEntryForm extends React.Component {
     this.state = {
       feeling: null,
       body: ' ',
-      alert: null
+      alert: null,
+      errors: []
     };
     
     this.handleChange = this.handleChange.bind(this);
@@ -24,12 +25,16 @@ class JournalEntryForm extends React.Component {
 
   createJournalEntry(event) {
     event.preventDefault();
-    if (this.state.body !== undefined && this.state.body.length >= 3 && this.state.feeling !== null){
-      JournalEntry.create(this.state)
-      this.setState({alert: "success"})
-    } else {
-      this.setState({alert: "danger"})
-    }
+    const journal_entry = { feeling: this.state.feeling, body: this.state.body }
+  
+    JournalEntry.create(journal_entry).then(res => {
+      if (res.status == "error") {
+        this.setState({errors: res.message})
+        this.setState({alert: "danger"})
+        console.log(this.state.errors)
+      }
+    })
+
   }
 
 
@@ -51,7 +56,7 @@ class JournalEntryForm extends React.Component {
       <div>
         <div id="journalAlert">
         {this.state.alert == "success" ? <SuccessAlert /> : null}
-        {this.state.alert == "danger" ? <DangerAlert /> : null}
+        {this.state.alert == "danger" ? <DangerAlert errors={this.state.errors} /> : null}
         </div>
 
         <form id="journalEntryForm" onChange={this.handleChange} onSubmit={this.createJournalEntry} >
