@@ -16,7 +16,7 @@ const DangerAlert = props => (
         {props.errors.feeling !== undefined ? 
           ( props.errors.feeling.map(error => (
             <li key={error}>
-              Feeling rating {error}
+              Feeling rating: {error}
             </li>
           )
         )) : null }
