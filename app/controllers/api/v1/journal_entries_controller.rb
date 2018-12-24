@@ -9,13 +9,13 @@ class Api::V1::JournalEntriesController < Api::ApplicationController
   def create
     journal_entry = JournalEntry.new journal_entry_params
     journal_entry.user = current_user
-    
-    if journal_entry.save
-    render json: journal_entry
 
+    if journal_entry.save
+      render json: journal_entry
     else
-      render json: journal_entry.errors
+      render json: { status: :error, message: journal_entry.errors }
     end
+
   end
 
   def show

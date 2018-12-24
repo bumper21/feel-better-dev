@@ -19,8 +19,9 @@
   <body>
     <div class="container" id="contentContainer">
     <header>
-      <nav class="navbar navbar-default" id="navContainer">
-        <div class="container-fluid">
+      <nav class="navbar navbar-fixed-top" id="navContainer">
+
+        <div class="container-fluid" >
           <ul class="nav navbar-nav navbar-left" id="brandUl">
             <li id="brandLi" >
               <a class="navbar-link navbar-left" id="brand" href="/">
@@ -28,30 +29,31 @@
               </a>
             </li>
           </ul>
-
+          
+            
           <ul class="nav navbar-nav navbar-right" id="navRight">
             <% if user_signed_in? %>
-            <li> <%= link_to 'Journal', journal_entries_path %> </li>
-            <li> 
+            <li class="nav-item"> <%= link_to 'Journal', journal_entries_path %> </li>
+            <li class="nav-item"> 
               <a> Favorites </a>
             </li>
             <% end %>
 
             <% if user_signed_in? && current_user.admin? %>
-              <li> <%= link_to 'MHExercises', exercises_path %> </li>
-              <li> <%= link_to 'New MHExercise', new_exercise_path%> </li>
+              <li class="nav-item"> <%= link_to 'MHExercises', exercises_path %> </li>
+              <li class="nav-item"> <%= link_to 'New MHExercise', new_exercise_path%> </li>
             <% end %>
 
             <% if user_signed_in? %>
-              <li> 
+              <li class="nav-item"> 
                 <a> 
                   Hello <%= current_user.first_name %>! 
                 </a>
               </li>
-              <li> <%= link_to 'Sign Out', sessions_path, method: :delete %></li>
+              <li class="nav-item"> <%= link_to 'Sign Out', sessions_path, method: :delete %></li>
             <% else %>
-              <li> <%= link_to 'Sign Up', new_user_path %> </li>
-              <li> <%= link_to 'Sign In', new_sessions_path %> </li>
+              <li class="nav-item"> <%= link_to 'Sign Up', new_user_path %> </li>
+              <li class="nav-item"> <%= link_to 'Sign In', new_sessions_path %> </li>
             <% end %>
           </ul>
         </div>
@@ -59,7 +61,7 @@
     </header>
 
     <% flash.each do |type, message| %>
-        <div class="alert alert-<%= type %> alert-dismissible fade show" role="alert">
+        <div id="alerts" class="alert alert-<%= type %> alert-dismissible fade show" role="alert">
           <%= message %>
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>

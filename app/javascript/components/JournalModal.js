@@ -40,7 +40,7 @@ class JournalModal extends Component {
           <Modal.Header>
             <Modal.Title>Your Journal Entry</Modal.Title>
           </Modal.Header>
-          <Modal.Body onSubmit={this.handleClose}>
+          <Modal.Body>
             <JournalEntryForm  />
           </Modal.Body>
           <Modal.Footer>

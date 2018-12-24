@@ -21,7 +21,8 @@ class VideoModal extends Component {
 
     this.state = {
       show: false,
-      data: []
+      data: [],
+      error: null,
   
     };
     
@@ -44,7 +45,7 @@ class VideoModal extends Component {
           data.snippet.resourceId.videoId)
         )
       })
-    })
+    }).catch(error => this.setState({ error }))
   }
 
 
@@ -57,6 +58,16 @@ class VideoModal extends Component {
   }
 
   render() {
+    const {
+      show,
+      data,
+      error
+    } = this.state
+
+    if (error) {
+      return <p>Something went wrong</p>
+    }
+
     if(this.state.data === []) { return }
     
     return (
