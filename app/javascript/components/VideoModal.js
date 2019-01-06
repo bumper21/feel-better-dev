@@ -58,17 +58,6 @@ class VideoModal extends Component {
   }
 
   render() {
-    const {
-      show,
-      data,
-      error
-    } = this.state
-
-    if (error) {
-      return <p>Something went wrong</p>
-    }
-
-    if(this.state.data === []) { return }
     
     return (
       <div>
