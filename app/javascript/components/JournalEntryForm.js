@@ -32,18 +32,20 @@ class JournalEntryForm extends React.Component {
       if (res.status == "error") {
         this.setState({errors: res.message})
         this.setState({alert: "danger"})
-        console.log(this.state.errors)
-      } else (
+        // console.log(this.state.errors)
+      } else if (res.error == "Unauthorized") {
+        this.setState({errors: res})
+        this.setState({alert: "danger"})
+      } else if (res.status == "success") {
         this.setState({alert: "success"})
-      )
+      }
     })
-
   }
 
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value})
-    console.log(e.target.name, e.target.value)
+    // console.log(e.target.name, e.target.value)
   }
 
   render() {
