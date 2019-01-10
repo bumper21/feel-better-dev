@@ -28,6 +28,7 @@ class JournalEntryForm extends React.Component {
     const journal_entry = { feeling: this.state.feeling, body: this.state.body }
   
     JournalEntry.create(journal_entry).then(res => {
+      console.log(res)
       if (res.status == "error") {
         this.setState({errors: res.message})
         this.setState({alert: "danger"})
