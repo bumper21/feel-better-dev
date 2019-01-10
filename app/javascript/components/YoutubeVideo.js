@@ -15,13 +15,12 @@ const YoutubeVideo = props => {
   )
 
   return (
-    <ReactPlayer 
+      <ReactPlayer 
       className="react-player"
       url={finalUrl} 
-      width='100%' 
-      height='100%'
+      controls='true'
       autoPlay={false} 
-      />
+      />                
   )
 }
   
