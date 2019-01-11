@@ -1,24 +1,29 @@
 # README
+Version 1.0
+Feel Better is a mental health wellness web application.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  This application was made to assist those struggling with their mental health through
+simple mental health exercises, educational/motivational videos, and the ability to 
+journal and track ones emotions. 
 
-Things you may want to cover:
+Backend Logic Built with...
+-Ruby on Rails
+-ActiveRecord
+-PostgresSQL
 
-* Ruby version
+Front End built with...
+-ReactJS
+-React-Bootstrap
+-Rails Views
+-Bootstrap
 
-* System dependencies
+APIs...
+-Youtube Playlists API
+-Data requests made with Axios
 
-* Configuration
 
-* Database creation
+FUTURE UPDATES
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+-Adding a favoriting feature for mental health exercises and videos.
+-Implement a graphing mechanic for visual display of daily feeling rating.
+-Password Recovery
