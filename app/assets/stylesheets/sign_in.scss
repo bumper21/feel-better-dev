@@ -3,12 +3,22 @@
 }
 
 #signInTitle {
-  color: white;
-  text-align: center;
+  // color: white;
+  // text-align: center;
+  // font-family: mainButtonsFont, Arial, sans-serif;
+  // font-size: 80px;
+  // margin-bottom: 50px;
+  background :rgba(255, 255, 255, 0.2);
+  margin-top: 10vh;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  display:flex;
   font-family: mainButtonsFont, Arial, sans-serif;
+  color: snow;
   font-size: 80px;
-  margin-bottom: 50px;
-
+  justify-content: center;
+  border: 3px solid white;
+  border-radius: 5px;
 }
 
 #signInContent form {
