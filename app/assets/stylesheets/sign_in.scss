@@ -1,10 +1,13 @@
-
-#signInForm {
-  display: flex;
+#signInContent {
+  margin-top: 10vh;
 }
 
-#signInForm label {
+#signInTitle {
   color: white;
+  text-align: center;
+  font-family: mainButtonsFont, Arial, sans-serif;
+  font-size: 60px;
+
 }
 
 
@@ -16,12 +19,12 @@
   border: 2px solid black;
   border-radius: 5px;
   font-size: 20px;
+  opacity: .9;
   
 }
 
-#signInTitle {
+#signInContent label {
   color: white;
-  font-family: mainButtonsFont, Arial, sans-serif;
-  font-size: 60px
-
+  font-size: 18px;
+  opacity: .8;
 }
