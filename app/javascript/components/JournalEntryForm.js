@@ -28,7 +28,7 @@ class JournalEntryForm extends React.Component {
     const journal_entry = { feeling: this.state.feeling, body: this.state.body }
   
     JournalEntry.create(journal_entry).then(res => {
-      console.log(res)
+      // console.log(res)
       if (res.status == "error") {
         this.setState({errors: res.message})
         this.setState({alert: "danger"})
@@ -36,7 +36,7 @@ class JournalEntryForm extends React.Component {
       } else if (res.error == "Unauthorized") {
         this.setState({errors: res})
         this.setState({alert: "danger"})
-      } else if (res.status == "success") {
+      } else {
         this.setState({alert: "success"})
       }
     })
@@ -91,7 +91,7 @@ class JournalEntryForm extends React.Component {
             <FormControl id="placeHolder" name="body" componentClass="textarea" rows={10} placeholder="What are your thoughts? Try reading them outloud after writing them down." />
           </FormGroup>
 
-          <Button id= "journalSubmitBtn" type="submit" value="submit"> </Button>
+          <Button id="journalSubmitBtn" type="submit" value="submit"> </Button>
 
         </form>
       </div>

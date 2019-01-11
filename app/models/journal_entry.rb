@@ -5,5 +5,6 @@ class JournalEntry < ApplicationRecord
             numericality: { only_integer: true }
 
   validates :body, presence: true,
+            uniqueness: { message: 'has already been saved'},
             length: { minimum: 5 }
 end
