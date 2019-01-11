@@ -1,3 +1,14 @@
-<h1> Sign Up </h1>
 
-<%= render "form" %>
+<div id="signUpContent">
+
+  <h1 id="signUpTitle">Sign Up</h1>
+
+  <%= simple_form_for "", id: "signUpForm", url: sessions_path do |f| %>
+    <%= f.input :email %>
+    <%= f.input :password %>
+    <div id="signUpButton">
+    <%= submit_tag 'Submit', class: "button" %>
+    </div>
+  <% end %>
+
+</div>

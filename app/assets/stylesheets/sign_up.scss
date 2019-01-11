@@ -1,18 +1,24 @@
-#signInContent {
+#signUpContent {
   margin-top: 10vh;
 }
 
-#signInTitle {
+#signUpTitle {
   color: white;
   text-align: center;
   font-family: mainButtonsFont, Arial, sans-serif;
   font-size: 80px;
-  margin-bottom: 50px;
+  margin-bottom: 50px
 
 }
 
+#signUpContent form {
+  text-align: center;
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
 
-#signInButton .button {
+
+#signUpButton .button {
   border-radius: 10px;
   cursor: pointer;
   width: 80px;
@@ -24,7 +30,7 @@
   
 }
 
-#signInContent label {
+#signUpContent label {
   color: white;
   font-size: 18px;
   opacity: .8;
