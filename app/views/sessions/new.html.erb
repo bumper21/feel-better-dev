@@ -1,9 +1,13 @@
-<h1 id="signInTitle">Sign In</h1>
+<div id="signInContent">
 
-<%= simple_form_for "", id: "signInForm", url: sessions_path do |f| %>
-  <%= f.input :email %>
-  <%= f.input :password %>
-  <div id="signInButton">
-  <%= submit_tag 'Sign In', class: "button" %>
-  </div>
-<% end %>
+  <h1 id="signInTitle">Sign In</h1>
+
+  <%= simple_form_for "", id: "signInForm", url: sessions_path do |f| %>
+    <%= f.input :email %>
+    <%= f.input :password %>
+    <div id="signInButton">
+    <%= submit_tag 'Sign In', class: "button" %>
+    </div>
+  <% end %>
+
+</div>
