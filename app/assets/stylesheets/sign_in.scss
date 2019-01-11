@@ -11,6 +11,18 @@
 
 }
 
+#signInContent form {
+  text-align: center;
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+
+#signInContent label {
+  color: white;
+  font-size: 18px;
+  opacity: .8;
+}
+
 
 #signInButton .button {
   border-radius: 10px;
@@ -22,10 +34,4 @@
   font-size: 18px;
   opacity: .9;
   
-}
-
-#signInContent label {
-  color: white;
-  font-size: 18px;
-  opacity: .8;
 }
