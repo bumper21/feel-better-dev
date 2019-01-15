@@ -1,7 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import { Modal } from 'react-bootstrap';
-import YoutubeVideo from './YoutubeVideo';
+import YoutubePlaylistVideo from './YoutubePlaylistVideo';
 import YOUTUBE_API_KEY from './Api_keys';
 import axios from "axios"
 
@@ -67,7 +67,7 @@ class VideoModal extends Component {
         
         <Modal id="videoModal" show={this.state.show} onHide={this.handleClose}>
           <Modal.Body className="player-wrapper">
-            <YoutubeVideo data={this.state.data} />
+            <YoutubePlaylistVideo data={this.state.data} />
           </Modal.Body>
         </Modal>
 
