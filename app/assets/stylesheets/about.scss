@@ -1,0 +1,28 @@
+.aboutHeading {
+  background :rgba(255, 255, 255, 0.2);
+  margin-top: 10vh;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  display:flex;
+  font-family: mainButtonsFont, Arial, sans-serif;
+  color: snow;
+  font-size: 80px;
+  justify-content: center;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+.aboutDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.aboutDescription {
+  margin-top: 5vh;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  background :rgba(255, 255, 255, 0.0);
+  font-size: 25px;
+  text-align: center;
+  color: white;
+}
