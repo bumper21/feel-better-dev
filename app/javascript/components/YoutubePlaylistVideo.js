@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 
-const YoutubeVideo = props => {
+const YoutubePlaylistVideo = props => {
   const videoUrls = (
     props.data
   )
@@ -18,10 +18,10 @@ const YoutubeVideo = props => {
       <ReactPlayer 
       className="react-player"
       url={finalUrl} 
-      controls='true'
+      controls={true}
       autoPlay={false} 
       />                
   )
 }
   
-  export default YoutubeVideo;
+  export default YoutubePlaylistVideo;
