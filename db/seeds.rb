@@ -3,17 +3,17 @@ Exercise.delete_all
 JournalEntry.delete_all
 User.delete_all
 
-PASSWORD = "secret"
-# NUM_OF_EXERCISES = 25
+# PASSWORD = "secret"
+# # NUM_OF_EXERCISES = 25
 
-super_user = User.create(
-  first_name: "Dan",
-  last_name: "Scholz",
-  username: "bumper21",
-  email: "bumper21@gmail.com",
-  password: PASSWORD,
-  admin: true
-)
+# super_user = User.create(
+#   first_name: "Dan",
+#   last_name: "Scholz",
+#   username: "bumper21",
+#   email: "bumper21@gmail.com",
+#   password: PASSWORD,
+#   admin: true
+# )
 
 admin1 = User.where(admin: true).last
 
