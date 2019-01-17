@@ -21,6 +21,7 @@ class JournalEntriesController < ApplicationController
     if current_user
       render :index
     else
+      flash[:danger] = "Please Sign In"
       redirect_to root_path
     end
 
