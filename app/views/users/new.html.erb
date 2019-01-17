@@ -4,8 +4,10 @@
   <h1 id="signUpTitle">Sign Up</h1>
 
   <%= simple_form_for @user, id: "signUpForm" do |f| %>
+    <%= f.input :username %>
     <%= f.input :email, placeholder: "name@mail.com" %>
     <%= f.input :password %>
+    <%= f.input :password_confirmation %>
     <div id="signUpButton">
     <%= submit_tag 'Submit', class: "button" %>
     </div>
