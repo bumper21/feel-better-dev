@@ -3,8 +3,8 @@
 
   <h1 id="signUpTitle">Sign Up</h1>
 
-  <%= simple_form_for "", id: "signUpForm", url: sessions_path do |f| %>
-    <%= f.input :email %>
+  <%= simple_form_for @user, id: "signUpForm" do |f| %>
+    <%= f.input :email, placeholder: "name@mail.com" %>
     <%= f.input :password %>
     <div id="signUpButton">
     <%= submit_tag 'Submit', class: "button" %>
