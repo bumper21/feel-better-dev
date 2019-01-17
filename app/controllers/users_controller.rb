@@ -12,8 +12,10 @@ class UsersController < ApplicationController
       flash[:success] = 'Thank you for signing up!'
       redirect_to root_path
     else
-      render :new
+      #When user fails to sign up, the flash alert renders. But even when exited, if a user
+      #goes to another page the flash alert will re-render. Low priority but needs fix
       flash[:danger] = "Failed to Sign Up"
+      render :new
     end
   end
 
@@ -24,6 +26,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password)
+    params.require(:user).permit(:email, :password, :password_confirmation, :username)
   end
 end
