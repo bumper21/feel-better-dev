@@ -6,6 +6,7 @@
     "axios": "^0.18.0",
     "babel-preset-react": "^6.24.1",
     "bootstrap": "^3.3.7",
+    "caniuse-lite": "^1.0.30000697",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-bootstrap": "^0.32.4",
@@ -14,7 +15,8 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react_ujs": "^2.4.4",
-    "video-react": "^0.13.1"
+    "video-react": "^0.13.1",
+    "webpack": "^2.2.0"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"
