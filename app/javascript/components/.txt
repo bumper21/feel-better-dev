@@ -1,3 +1,0 @@
-<OverlayTrigger overlay={tooltip}>
-              <a id="tooltipLink" href="#tooltip">feeling?</a>
-            </OverlayTrigger>{' '}
