@@ -26,8 +26,7 @@ module FeelBetter2
 
     config.middleware.insert_before(0, Rack::Cors) do
       allow do
-        origins '*'
-        # origins 'localhost:3035', 'https://feel--better.herokuapp.com','localhost:3000'
+        origins 'localhost:3035', 'feel--better.herokuapp.com','localhost:3000'
         # "origins" specifies which host are allowed to
         # make CORS request to our Rails server
         resource(
