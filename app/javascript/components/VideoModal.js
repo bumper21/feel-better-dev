@@ -10,7 +10,7 @@ const playlistId = `PLVpJ_ku_DBpYQCtNK7pyuGW30kEbfC4bU`
 
 const options =  {
   part: `snippet`,
-  key: YOUTUBE_API_KEY,
+  key: process.env.YOUTUBE_API_KEY,
   maxResults: 15,
   playlistId: playlistId
 }
