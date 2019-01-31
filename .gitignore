@@ -30,5 +30,5 @@
 /node_modules
 yarn-debug.log*
 .yarn-integrity
-/app/javascript/components/Api_keys.js
+/app/javascript/components/ApiKeys.js
 /app/javascript/components/exercises.txt
