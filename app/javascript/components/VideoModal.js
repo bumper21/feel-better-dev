@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import { Modal } from 'react-bootstrap';
 import YoutubePlaylistVideo from './YoutubePlaylistVideo';
-import YOUTUBE_API_KEY from './Api_keys';
+import YOUTUBE_API_KEY from './ApiKeys';
 import axios from "axios"
 
 const PLAYLIST_URL = `https://www.googleapis.com/youtube/v3/playlistItems`
