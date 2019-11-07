@@ -1,7 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
 import { Modal } from 'react-bootstrap';
-require('dotenv').config()
 import YoutubePlaylistVideo from './YoutubePlaylistVideo';
 // import YOUTUBE_API_KEY from './ApiKeys';
 import axios from "axios"
@@ -37,6 +36,8 @@ class VideoModal extends Component {
   componentDidMount() {
     this.getVideoData()
     console.log(process.env.YOUTUBE_API_KEY)
+    const dotenv = require('dotenv').config()
+    console.log(dotenv)
     
   }
   
