@@ -12,7 +12,6 @@ RSpec.describe User, type: :model do
     it "requires username" do
       u = User.new
       u.valid?
-      puts u.errors.messages
       expect(u.errors.messages).to have_key(:username)
     end
   end
