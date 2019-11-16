@@ -28,7 +28,7 @@ end
 10.times do
   first_name = Faker::Name.first_name
   last_name = Faker::Name.last_name
-  username = Faker::DragonBall.character
+  username = Faker::Games::Pokemon.name
 
   u = User.create(
     first_name: first_name,
@@ -45,7 +45,7 @@ NUM_OF_JOURNAL_ENTRIES = 30
 
 NUM_OF_JOURNAL_ENTRIES.times do
   j = JournalEntry.create(
-    body: Faker::FamousLastWords.last_words,
+    body: Faker::Quote.famous_last_words,
     feeling: rand(1..10),
     user: users.sample,
   )
