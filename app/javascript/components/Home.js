@@ -4,10 +4,6 @@ import ExerciseModal from './FeelBetterModal';
 import JournalModal from './JournalModal';
 import VideoModal from './VideoModal';
 
-
-
-
-
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -19,9 +15,7 @@ class Home extends Component {
     };
   }
 
-
   render () {
-
     return (
       <div>
         <div id="buttonsDiv">

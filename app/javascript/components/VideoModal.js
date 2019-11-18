@@ -5,6 +5,8 @@ import YoutubePlaylistVideo from './YoutubePlaylistVideo';
 // import YOUTUBE_API_KEY from './ApiKeys';
 import axios from "axios"
 
+
+
 const PLAYLIST_URL = `https://www.googleapis.com/youtube/v3/playlistItems`
 const playlistId = `PLVpJ_ku_DBpYQCtNK7pyuGW30kEbfC4bU`
 
@@ -33,6 +35,9 @@ class VideoModal extends Component {
 
   componentDidMount() {
     this.getVideoData()
+    console.log(process.env.YOUTUBE_API_KEY)
+    const dotenv = require('dotenv').config()
+    console.log(dotenv)
     
   }
   
