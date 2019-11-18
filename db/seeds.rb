@@ -4,7 +4,7 @@
 # User.delete_all
 
 PASSWORD = "secret"
-NUM_OF_EXERCISES = 25
+
 
 super_user = User.create(
   first_name: "Dan",
@@ -17,6 +17,7 @@ super_user = User.create(
 
 admin1 = User.where(admin: true).last
 
+NUM_OF_EXERCISES = 25
 NUM_OF_EXERCISES.times do
   e = Exercise.create(
     title: Faker::GreekPhilosophers.name,

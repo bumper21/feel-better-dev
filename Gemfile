@@ -22,7 +22,7 @@ gem 'pry-rails'
 gem 'hirb'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
-gem 'rack-cors'
+gem 'rack-cors', '~> 1.0.4'
 gem 'cancancan', '~> 2.0'
 
 # Use CoffeeScript for .coffee assets and views
