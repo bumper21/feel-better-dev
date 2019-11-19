@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :exercises, only: [ :index, :show, :create, :destroy, :show_random ]
       get 'exercise/random', to: 'exercises#show_random'
-      resources :journal_entries, only: [ :new, :create ]
+      resources :journal_entries, only: [ :new, :create, :index, :destroy ]
     end
   end
   
