@@ -19,7 +19,8 @@ export const JournalEntry = {
       method: "POST",
       credentials: "include",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Accept":       "application/json"
       },
       body: JSON.stringify(params)
     }).then(res => res.json());
