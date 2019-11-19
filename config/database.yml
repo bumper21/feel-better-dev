@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: feel_better_2_production
-  username: feel_better_2
-  password: <%= ENV['FEEL_BETTER_2_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: utf8
+  url: <%= ENV['DATABASE_URL'] %>
