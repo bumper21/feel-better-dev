@@ -1,5 +1,5 @@
 class Api::V1::JournalEntriesController < Api::ApplicationController
-  before_action :authenticate_user!
+  skip_before_action :verify_authenticity_token
 
   def index
     journal_entries = JournalEntry.order created_at: :desc
