@@ -26,5 +26,7 @@
     "set-value": "^2.0.1",
     "video-react": "^0.13.9"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "mem": "^4.0.0"
+  }
 }
