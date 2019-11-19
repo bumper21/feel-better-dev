@@ -1,6 +1,5 @@
 const BASE_URL = process.env.BASE_URL;
 
-
 export const Exercise = {
   one(id) {
     return fetch(`${BASE_URL}/exercises/${id}`, {
