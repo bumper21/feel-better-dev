@@ -3,7 +3,7 @@
 # JournalEntry.delete_all
 # User.delete_all
 
-PASSWORD = "secret"
+PASSWORD = "supersecret"
 
 
 super_user = User.create(
@@ -42,7 +42,7 @@ end
 
 users = User.all
 
-NUM_OF_JOURNAL_ENTRIES = 30
+NUM_OF_JOURNAL_ENTRIES = 60
 
 NUM_OF_JOURNAL_ENTRIES.times do
   j = JournalEntry.create(
