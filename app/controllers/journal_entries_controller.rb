@@ -43,7 +43,7 @@ class JournalEntriesController < ApplicationController
   private
 
   def journal_entry_params
-    params.require(:journal_entry).permit(:feeling, :body)
+    params.(:journal_entry).permit(:feeling, :body)
   end
 
   def find_journal_entry

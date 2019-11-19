@@ -1,4 +1,5 @@
 class Api::V1::JournalEntriesController < Api::ApplicationController
+  before_action :authenticate_user!
 
   def index
     journal_entries = JournalEntry.order created_at: :desc
