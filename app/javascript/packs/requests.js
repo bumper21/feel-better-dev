@@ -1,5 +1,4 @@
-// const BASE_URL = `http://localhost:3000/api/v1`;
-const BASE_URL = `https://feel--better.herokuapp.com/`;
+const BASE_URL = process.env.BASE_URL;
 
 
 export const Exercise = {
