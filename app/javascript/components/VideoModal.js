@@ -35,7 +35,7 @@ class VideoModal extends Component {
 
   componentDidMount() {
     this.getVideoData()
-    console.log(process.env.YOUTUBE_API_KEY)
+    // console.log(process.env.YOUTUBE_API_KEY)
     const dotenv = require('dotenv').config()
   }
   
