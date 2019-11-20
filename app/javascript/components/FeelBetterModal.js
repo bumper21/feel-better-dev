@@ -18,10 +18,11 @@ class FeelBetterModal extends Component {
   }
 
   componentDidMount() {
-    console.log(Exercise.random())
     Exercise.random().then(exercise => {
+      console.log(exercise)
       this.setState({
         exercise: {...exercise}
+        
       })
     });
   }
