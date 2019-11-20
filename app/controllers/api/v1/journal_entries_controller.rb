@@ -11,7 +11,7 @@ class Api::V1::JournalEntriesController < Api::ApplicationController
     journal_entry.user = current_user
 
     if journal_entry.save
-      render json: journal_entry
+      render json: {message: "Success"}
     else
       render json: { status: :error, message: journal_entry.errors }
     end

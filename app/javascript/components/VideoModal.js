@@ -35,10 +35,6 @@ class VideoModal extends Component {
 
   componentDidMount() {
     this.getVideoData()
-    console.log(process.env.YOUTUBE_API_KEY)
-    const dotenv = require('dotenv').config()
-    console.log(dotenv)
-    
   }
   
   getVideoData() {
@@ -50,7 +46,7 @@ class VideoModal extends Component {
           data.snippet.resourceId.videoId)
         )
       })
-    }).catch(error => this.setState({ error }))
+    }).catch(error => this.setState({ error }) )
   }
 
 
