@@ -8,7 +8,11 @@ export const Exercise = {
   },
   random() {
     return fetch(`${BASE_URL}/exercise/random`, {
-      credentials: "include"
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept":       "application/json"
+      },
     }).then(res => {
       console.log(res);
       res.json();
