@@ -16,6 +16,7 @@ class Api::V1::ExercisesController < Api::ApplicationController
 
   def show_random
     exercise = Exercise.all.sample
+    puts("RANDOM EXERCISE---------->", exercise)
     render json: exercise
   end
 
