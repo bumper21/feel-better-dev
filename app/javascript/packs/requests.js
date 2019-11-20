@@ -9,9 +9,16 @@ export const Exercise = {
   random() {
     return fetch(`${BASE_URL}/exercise/random`, {
       credentials: "include"
-    }).then(res => res.json());
+    }).then(res => {
+      console.log(res);
+      res.json();
+    })
   }
 }
+
+then(res => {
+  console.log(res);
+   res.json()
 
 export const JournalEntry = {
   create(params) {
