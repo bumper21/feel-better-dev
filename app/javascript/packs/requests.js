@@ -16,10 +16,6 @@ export const Exercise = {
   }
 }
 
-then(res => {
-  console.log(res);
-   res.json()
-
 export const JournalEntry = {
   create(params) {
     return fetch(`${BASE_URL}/journal_entries`, {
