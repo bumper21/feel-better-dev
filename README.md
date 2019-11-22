@@ -14,7 +14,7 @@ journal and track ones emotions. <br>
 Backend Logic Built with...<br>
 -Ruby on Rails <br>
 -ActiveRecord <br>
--PostgresSQL <br>
+-PostgreSQL <br>
 
 Front End built with...<br>
 -ReactJS <br>
