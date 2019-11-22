@@ -28,8 +28,8 @@ APIs...<br>
 
 
 RECENT UPDATES<br>
--added basic rspec tests on the user model
--updated gems and packages to get app back in working order.
+-added basic rspec tests on the user model<br>
+-updated gems and packages to get app back in working order.<br>
 
 POTENTIAL FUTURE UPDATES<br>
 
