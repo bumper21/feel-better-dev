@@ -25,6 +25,7 @@ Front End built with...<br>
 APIs...<br>
 -Youtube Playlists API<br>
 -Data requests made with Axios<br>
+-RoR Api<br>
 
 
 RECENT UPDATES<br>
